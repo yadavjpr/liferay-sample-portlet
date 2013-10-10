@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="liferay-sample-portlet" basedir="." default="deploy">
+	<import file="E:\LR62RC3\plugins\portlets/build-common-portlet.xml" />
+</project>
