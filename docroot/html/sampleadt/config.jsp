@@ -19,12 +19,15 @@ long displayStyleGroupId = GetterUtil.getLong(portletPreferences.getValue("displ
 This is the <b>Sample ADT Portlet</b> portlet in Config mode.
 
 <aui:form action="<%= configurationURL %>" method="post" name="fm">
+<aui:input name="cmd" type="hidden" value="update"/>
 	<aui:fieldset>    
 		<% TemplateHandler templateHandler =  TemplateHandlerRegistryUtil.getTemplateHandler("DemoClassName"); %>   
 		<liferay-ui:ddm-template-selector classNameId="<%= PortalUtil.getClassNameId(templateHandler.getClassName()) %>" 
 			displayStyle="<%= displayStyle %>"
 			 displayStyleGroupId="<%= displayStyleGroupId %>"
 			  refreshURL="<%= PortalUtil.getCurrentURL(request) %>" showEmptyOption="<%= true %>" /> 
-
+	<aui:button-row>
+		<aui:button type="submit" />
+	</aui:button-row>
 	</aui:fieldset> 
 </aui:form>
